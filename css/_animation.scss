@@ -1,0 +1,19 @@
+.tear {
+    position: relative;
+    bottom: 10px;
+    left: 20rem;
+    z-index: 1;
+    height: 1.5rem;
+    width: 1.5rem;
+    animation:
+    6s linear 0s infinite running drop;
+}
+
+  @keyframes drop {
+    from {
+        transform: translateY(-12em);
+}
+    to {
+        transform: translateX(0vw);
+    }
+  }

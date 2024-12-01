@@ -16,3 +16,4 @@ Here are some ideas to get you started:
 -->
 - 🔭 I’m currently working on my Web Design and Development diploma at NAIT
 - 🌱 I’m currently learning Sass, Tailwind, Business Essentials, SQLi, PHP
+- 😄 Pronouns: She/Her

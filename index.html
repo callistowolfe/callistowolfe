@@ -5,11 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My first website</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <section>
-        <h1>There's more on the way.</h1>
-        <p>Please be patient and enjoy a picture of my cat!</p>
-    </section>
+    <header class="flex">
+        <a href="index.html"><h1>Welcome to my first website!</h1></a>
+        <nav>
+            <ul class="flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="img/drop.png" alt="I'm sad that I lost my cat." class="tear">
+            <div class="cover">
+                <h2>There's more on the way.</h2>
+                <p>I've been a little distracted.</p>
+            </div>
+        </section>
+        <section class="resources">
+            <h2>Resources Used</h2>
+            <a href="https://www.flaticon.com/free-icons/water" title="water icons">Water icons created by Vectors Market - Flaticon</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation">MDN: Animation</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">MDN: @keyframes</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">MDN: Position</a>
+            <p>And a bit of fiddling to find the right speed, starting point and end point, that mostly works in all screen sizes.</p>
+
+        </section>
+    </main>
 </body>
 </html>

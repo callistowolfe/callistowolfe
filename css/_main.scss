@@ -1,0 +1,27 @@
+.hero {
+    background: url('../img/angus-banner.webp') no-repeat center  / cover;
+    color: #333;
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+    height: 550px;
+    width: 100%;
+}
+
+.cover {
+    background-color: #EDEDED;
+    backdrop-filter: blur(3px);
+    border-radius: 8px;
+    margin: 24px;
+    max-width: 500px;
+    padding: 24px;
+}
+
+.resources {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 2rem;
+}
