@@ -1,0 +1,6 @@
+@supports (grid-template-rows: masonry){
+    .grid {
+        display: grid;
+        grid-template-rows: masonry;
+    }
+}

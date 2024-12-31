@@ -80,15 +80,23 @@ select {
     scroll-behavior: auto !important;
   }
 }
+@supports (grid-template-rows: masonry) {
+  .grid {
+    display: grid;
+    grid-template-rows: masonry;
+  }
+}
 h1 {
   font-size: 2rem;
   line-height: 1;
 }
 
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
 }
 
 .tear {
@@ -119,6 +127,13 @@ header a {
   padding: 0.5rem 1rem;
 }
 
+.container,
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 .hero {
   background: url("../img/angus-banner.webp") no-repeat center/cover;
   color: #333;
@@ -145,4 +160,28 @@ header a {
   flex-wrap: nowrap;
   flex-direction: column;
   padding: 2rem;
+}
+
+.flex,
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  justify-content: center;
+}
+.grid h2,
+.grid p:first-of-type {
+  grid-column: 1/-1;
+}
+
+.cats {
+  grid-column: 1/-1;
+  align-self: start;
+  gap: 1rem;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,10 @@
+.container,
+.footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
 .hero {
     background: url('../img/angus-banner.webp') no-repeat center  / cover;
     color: #333;
@@ -24,4 +31,28 @@
     flex-wrap: nowrap;
     flex-direction: column;
     padding: 2rem;
+}
+
+.flex,
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    h2,
+    p:first-of-type {
+        grid-column: 1 / -1;
+    }
+}
+
+.cats {
+    grid-column: 1 / -1;
+    align-self: start;
+    gap: 1rem;
 }
