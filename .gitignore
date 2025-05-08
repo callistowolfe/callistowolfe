@@ -1,0 +1,5 @@
+# Ignore environment and config files
+.htaccess
+
+# Ignore VS Code SFTP config
+.vscode/sftp.json
