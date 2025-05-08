@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Val Smyth - Web Developer: MaterializeCSS</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+    <script>
+            $(document).ready(function(){
+                $('.parallax').parallax();
+            });
+    </script>
+</head>
+<body class="front">
+    <header>
+        <section class="header">
+            <div class="nav">
+                <div>
+                    <a href="index.html" class="logos">
+                        <img src="img/svg/logo.svg" alt="A howling wolf silhouette against a blue to purple gradient moon, Val Smyth's logo - Callistowolfe" class="logo">
+                        <img src="img/github.svg" alt="Github handle Callistowolfe" class="logo git">
+                    </a>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle Navigation">
+                    <svg width="30" height="30" viewBox="0 0 100 80" fill="#b600ff">
+                        <rect width="100" height="10"></rect>
+                        <rect y="30" width="100" height="10"></rect>
+                        <rect y="60" width="100" height="10"></rect>
+                    </svg>
+                </button>
+                <nav class="flex">
+                  <ul class="flex menu">
+                      <!-- Top Level-->
+                      <li><a href="/index">Home</a></li>
+                      <li><a rel="noopener" href="https://blog.valsmyth.ca/" target="_blank">Blog</a></li>
+                      <li>
+                          <a href="#" class="has-dropdown">Code</a>
+                          <ul class="dropdown">
+                              <li><a rel="noopener" href="https://seeds.valsmyth.ca/public/" target="_blank">PHP</a></li>
+                              <li><a href="/jquery-ui">jQuery UI</a></li>
+                              <li><a href="/jquery">jQuery</a></li>
+                              <li><a href="/materialize">MaterializeCSS</a></li>
+                              <li><a href="/ajax">AJAX</a></li>
+                              <li><a href="/maps-api">Maps API</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="#" class="has-dropdown">Design</a>
+                          <ul class="dropdown">
+                              <li><a href="/photography">Photography</a></li>
+                              <li><a href="/photoshop">Photoshop</a></li>
+                              <li><a href="/illustrator">Illustrator</a></li>
+                              <li><a href="/sketches">Sketches</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="/my-learning">My Learning</a></li>
+                  </ul>
+              </nav>
+            </div>
+            <div class="banner-cover">
+                <div class="action">
+                    <h1>Val Smyth</h1>
+                    <div class="slider">
+                        <div class="slides">
+                            <h2>Web Developer</h2>
+                            <h2>Web Designer</h2>
+                            <h2>Photographer</h2>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <a rel="noopener" href="https://www.facebook.com/valerie.smyth" target="_blank"><img src="img/svg/icons8-facebook.svg" alt="Facebook logo"></a>
+                        <a rel="noopener" href="https://www.linkedin.com/in/val-smyth-00b95771/" target="_blank" class="square"><img src="img/svg/icons8-linkedin.svg" alt="LinkedIn logo"></a>
+                        <a rel="noopener" href="https://www.instagram.com/callistowolfe/?hl=en" target="_blank" class="square"><img src="img/svg/icons8-instagram.svg" alt="Instagram logo"></a>
+                        <a rel="noopener" href="https://github.com/callistowolfe" target="_blank"><img src="img/svg/icons8-github.svg" alt="GitHub logo"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </header>
+    <main>
+        <div class="container wrap">
+            <h2>Materialize</h2>
+            <div class="row">
+                <div class="col s12">
+                    <h2>Recipes</h2>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="img/fruit-leather.jpg" alt="Fruit leather">
+                        </div>
+                        <div class="card-content">
+                          <span class="card-title activator grey-text text-darken-4">Fruit Leather<i class="material-icons right">more_vert</i></span>
+                        </div>
+                        <div class="card-reveal">
+                          <span class="card-title grey-text text-darken-4">Fruit Leather<i class="material-icons right">close</i></span>
+                          <p>750 mL (3 cups) frozen berries or other frozen fruits</p>
+                          <p>30 mL (2 tbsp) lemon juice</p>
+                          <p>30 mL (2 tbsp) maple syrup or honey</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/chicken-lettuce-wrap.jpg" alt="Chicken lettuce wrap">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Chicken Lettuce Wrap<i class="material-icons right">more_vert</i></span>
+                      </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Chicken Lettuce Wrap<i class="material-icons right">close</i></span>
+                        <p>750 mL (3 cups) shredded or cubed cooked chicken breast</p>
+                        <p>2 ½ stalks celery, diced</p>
+                        <p>125 mL (½ cup) dried cranberries</p>
+                        <p>125 mL (½ cup) slivered almonds</p>
+                        <p>15 mL (1 tbsp) lemon juice (about ½ lemon)</p>
+                        <p>5 mL (1 tsp) mild curry powder</p>
+                        <p>125 (½ cup) light mayonnaise</p>
+                        <p>5 mL (1 tsp) garlic powder</p>
+                        <p>10 large lettuce leaves (butter lettuce works best)</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/chocolate-overnight.webp" alt="Chocolate overnight oats">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Chocolate Overnight Oats<i class="material-icons right">more_vert</i></span>
+                      </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Chocolate Overnight Oats<i class="material-icons right">close</i></span>
+                        <p>335 mL (1 ⅓ cups) rolled oats</p>
+                        <p>250 mL (1 cup) skim milk or unsweetened fortified plant-based beverages</p>
+                        <p>85 mL (⅓ cup) 0% plain Greek yogurt</p>
+                        <p>1 ripe banana, mashed (about 125 mL/½ cup)</p>
+                        <p>20 mL (4 tsp) maple syrup or brown sugar</p>
+                        <p>15 mL (1 tbsp) cocoa powder</p>
+                        <p>250 mL (1 cup) fresh or frozen raspberries</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/banana-loaf.jpg" alt="Banana loaf">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Banana Loaf<i class="material-icons right">more_vert</i></span>
+                      </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Banana Loaf<i class="material-icons right">close</i></span>
+                        <p>2 eggs</p>
+                        <p>85 mL (⅓ cup) maple syrup</p>
+                        <p>5 mL (1 tsp) vanilla extract</p>
+                        <p>125 mL (½ cup) vegetable oil</p>
+                        <p>3 bananas, mashed</p>
+                        <p>250 mL (1 cup) whole wheat flour</p>
+                        <p>190 mL (¾ cup) all-purpose flour</p>
+                        <p>5 mL (1 tsp) baking soda</p>
+                        <p>5 mL (1 tsp) cinnamon</p>
+                        <p>1 mL (¼ tsp) salt</p>
+                        <p>250 ml (1 cup) unsalted walnuts, toasted and chopped</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/cornbread.jpg" alt="Cornbread">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Cornbread<i class="material-icons right">more_vert</i></span>
+                      </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Cornbread<i class="material-icons right">close</i></span>
+                        <p>30 mL (2 tbsp) light sour cream</p>
+                        <p>310 mL (1 ¼ cups) lower fat milk or unsweetened fortified plant-based beverage</p>
+                        <p>60 mL (¼ cup) sunflower oil</p>
+                        <p>2 eggs</p>
+                        <p>335 mL (1 ⅓ cups) whole wheat flour</p>
+                        <p>165 mL (⅔ cup) medium grind cornmeal</p>
+                        <p>165 mL (⅔ cup) granulated sugar</p>
+                        <p>15 mL (1 tbsp) baking powder</p>
+                        <p>2 mL (½ tsp) salt</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/berry-brunch-bake.jpg" alt="Berry brunch bake">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Berry Brunch Back<i class="material-icons right">more_vert</i></span>
+                      </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Berry Brunch Back<i class="material-icons right">close</i></span>
+                        <p>125 mL (½ cup) whole wheat flour</p>
+                        <p>125 mL (½ cup) all-purpose flour</p>
+                        <p>310 mL (1 ¼ cups) lower fat milk or unsweetened fortified plant-based beverage</p>
+                        <p>4 eggs</p>
+                        <p>5 mL (1 tsp) vanilla extract</p>
+                        <p>20 mL (1 ½ tbsp) honey</p>
+                        <p>10 mL (2 tsp) non-hydrogenated margarine</p>
+                        <p>45 mL (3 tbsp) vegetable oil</p>
+                        <p>375 mL (1 ½ cups) frozen berries</p>
+                        <p>125 mL (½ cup) almonds, slivered or chopped</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/cauliflower-bean-dip.webp" alt="Cornflower bean dip">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Cauliflower Bean Dip<i class="material-icons right">more_vert</i></span>
+                      </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Cauliflower Bean Dip<i class="material-icons right">close</i></span>
+                        <p>1 head cauliflower, cut into small florets</p>
+                        <p>30 mL (2 tbsp) olive oil, divided</p>
+                        <p>1 can (540 mL/19 oz) no salt added white kidney beans, drained and rinsed</p>
+                        <p>2 mL (½ tsp) garlic powder</p>
+                        <p>2 mL (½ tsp) paprika</p>
+                        <p>2 mL (½ tsp) lemon juice (about ¼ lemon)</p>
+                        <p>125 mL (½ cup) water</p>
+                        <p>Salt and pepper to taste</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/three-sisters-tacos.jpg" alt="Three sisters tacos">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Three Sister's Taco<i class="material-icons right">more_vert</i></span>
+                      </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Three Sister's Taco<i class="material-icons right">close</i></span>
+                        <p>Squash:</p>
+                        <p>1 medium butternut squash (about 1 kg/2 ¼ lb)</p>
+                        <p>10 mL (2 tsp) olive oil</p>
+                        <p>5 mL (1 tsp) chili powder</p>
+                        <p>5 mL (1 tsp) dried oregano</p>
+                        <p>Refried Beans:</p>
+                        <p>15 mL (1 tbsp) olive oil</p>
+                        <p>2 garlic cloves, peeled</p>
+                        <p>1 ½ cans (1 ½ x 540 mL/19 oz) no salt added black beans, drained and rinsed</p>
+                        <p>5 mL (1 tsp) ground cumin</p>
+                        <p>30 mL (2 tbsp) lime juice (about 1 lime)</p>
+                        <p>5 mL (1 tsp) chili powder</p>
+                        <p>Tacos:</p>
+                        <p>12 small whole grain corn tortillas</p>
+                        <p>125 mL (½ cup) light feta cheese or queso fresco</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/pineapple-chicken.jpg" alt="Pineapple Chicken">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Pineapple Chicken<i class="material-icons right">more_vert</i></span>
+                      </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Pineapple Chicken<i class="material-icons right">close</i></span>
+                        <p>190 mL (¾ cup) no sugar added canned crushed pineapple</p>
+                        <p>15 mL (1 tbsp) fresh ginger, grated or minced</p>
+                        <p>1 clove garlic, grated or minced</p>
+                        <p>15 mL (1 tbsp) lower sodium soy sauce</p>
+                        <p>10 mL (2 tsp) vegetable oil</p>
+                        <p>3 boneless skinless chicken breasts (about 500 g/1 lb)</p>
+                        <p>1 bell pepper, chopped</p>
+                        <p>30 mL (2 tbsp) fresh mint, chopped</p>
+                        <p>2 mL (½ tsp) hot pepper sauce</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6"> <img class="responsive-img" src="img/food_guide_visual_en.webp" alt="Food Guide"></div>
+                <div class="col s12 m6">
+                    <h2>How to make healthy choices on campus</h2>
+                    <p><strong>These strategies can help you stay on track with healthy eating while on campus:</strong></p>
+                    <p>Eat regularly</p>
+                    <p>Regular meals and snacks</p>
+                    <p>Keep your energy up by having regular meals and snacks. Give yourself enough time to eat, whether you visit the dining hall, eat out, or prepare something simple in your dorm.</p>
+                    <p><strong>Make healthy choices easy</strong></p>
+                    <p>Keep ready-to-eat healthy snacks like fruits and nuts handy to eat between classes or during study sessions.</p>
+                    <p><strong>Think about your drink</strong></p>
+                    <p>Stay hydrated</p>
+                    <p>Keep a reusable water bottle with you to drink from throughout the day. Try adding herbs or fruits to your water for added flavour!</p>
+                    <p><strong>Alcohol awareness</strong></p>
+                    <p>Know the risks associated with alcohol consumption. Binge drinking can have serious health risks. If you do choose to drink alcohol, be mindful of your intake and drink responsibly.</p>
+                    <p><strong>Check caffeine intake</strong></p>
+                    <p>Too much caffeine can affect your sleep and overall wellbeing. Aim to limit your daily intake and avoid excessive consumption, especially from specialty coffee and tea drinks. These are often also high in saturated fats and added sugars.</p>
+                    <p><strong>Supplemented drinks</strong></p>
+                    <p>Caffeinated energy drinks and other beverages with added vitamins and minerals can pose a health risk if you drink too much of them. Look for Supplemented Food Facts labels to better understand the ingredients and quantities you're consuming.</p>
+                    <p>Supplemented food and drinks are not needed for healthy eating. Following Canada's food guide can help you meet your nutrient needs.</p>
+                    <p><strong>Learn to cook on a budget</strong></p>
+                    <p><strong>Planning and budgeting</strong></p>
+                    <p>If you are cooking for yourself, take some time to plan what you eat. Think about your schedule and how much time you have to prepare and eat your meals and snacks.</p>
+                    <p>Use ingredients you already have to reduce food waste and take advantage of coupons, flyers and student discount days at local grocery stores.</p>
+                    <p><strong>Learn basic cooking skills</strong></p>
+                    <p>Discover simple techniques and recipes to transform affordable ingredients into delicious and nutritious meals and snacks.</p>
+                    <p><strong>Optimize your space</strong></p>
+                    <p>If your dorm space is limited, choose versatile ingredients for easy recipes. Explore recipes that are “10 ingredients or less” and “no-cook” from the food guide kitchen.</p>
+                    <p><strong>Explore affordable alternatives</strong></p>
+                    <p>Consider canned, dried, and frozen food options as alternatives to fresh produce. Look for options with little to no added sodium, sugars or saturated fats.</p>
+                    <p><strong>Embrace bulk cooking</strong></p>
+                    <p>Cooking in larger quantities can save you time and money, making your transition to home cooking smoother. Try preparing batches of soups, stews or casseroles that can be easily reheated.</p>
+                </div>
+              </div>
+
+        </div>
+
+
+    </main>
+
+    <footer>
+      <div>
+          <a href="/index" class="logos">
+              <img src="img/svg/logo.svg" alt="A howling wolf silhouette against a blue to purple gradient moon, Val Smyth's logo - Callistowolfe" class="logo">
+              <img src="img/github.svg" alt="Github handle Callistowolfe" class="logo git">
+          </a>
+      </div>
+      <div>
+          <h2>Val Smyth</h2>
+          <p>&copy; 2024 My first website</p>
+      </div>
+      <nav class="footnav">
+          <ul class="foot-menu">
+              <li><a href="/index">Home</a></li>
+              <li><a rel="noopener" href="https://blog.valsmyth.ca/" target="_blank">Blog</a></li>
+              <li><a href="/my-learning">My Learning</a></li>
+              <li><a href="license.txt" target="_blank">Licenses</a></li>
+          </ul>
+      </nav>
+  </footer>
+</body>
+</html>

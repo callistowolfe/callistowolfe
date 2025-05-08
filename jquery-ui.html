@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Val Smyth - Web Developer: jQueryUI</title>
+    <meta name="description" content="Samples of jQueryUI">
+    <meta name="keywords" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+</head>
+<body>
+    <header>
+        <section class="header">
+            <div class="nav">
+                <div>
+                    <a href="index.html" class="logos">
+                        <img src="img/svg/logo.svg" alt="A howling wolf silhouette against a blue to purple gradient moon, Val Smyth's logo - Callistowolfe" class="logo">
+                        <img src="img/github.svg" alt="Github handle Callistowolfe" class="logo git">
+                    </a>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle Navigation">
+                    <svg width="30" height="30" viewBox="0 0 100 80" fill="#b600ff">
+                        <rect width="100" height="10"></rect>
+                        <rect y="30" width="100" height="10"></rect>
+                        <rect y="60" width="100" height="10"></rect>
+                    </svg>
+                </button>
+                <nav class="flex">
+                    <ul class="flex menu">
+                        <!-- Top Level-->
+                        <li><a href="/index">Home</a></li>
+                        <li><a rel="noopener" href="https://blog.valsmyth.ca/" target="_blank">Blog</a></li>
+                        <li>
+                            <a href="#" class="has-dropdown">Code</a>
+                            <ul class="dropdown">
+                                <li><a rel="noopener" href="https://seeds.valsmyth.ca/public/" target="_blank">PHP</a></li>
+                                <li><a href="/jquery-ui">jQuery UI</a></li>
+                                <li><a href="/jquery">jQuery</a></li>
+                                <li><a href="/materialize">MaterializeCSS</a></li>
+                                <li><a href="/ajax">AJAX</a></li>
+                                <li><a href="/maps-api">Maps API</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="has-dropdown">Design</a>
+                            <ul class="dropdown">
+                                <li><a href="/photography">Photography</a></li>
+                                <li><a href="/photoshop">Photoshop</a></li>
+                                <li><a href="/illustrator">Illustrator</a></li>
+                                <li><a href="/sketches">Sketches</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/my-learning">My Learning</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="banner-cover">
+                <div class="action">
+                    <h1>Val Smyth</h1>
+                    <div class="slider">
+                        <div class="slides">
+                            <h2>Web Developer</h2>
+                            <h2>Web Designer</h2>
+                            <h2>Photographer</h2>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <a rel="noopener" href="https://www.facebook.com/valerie.smyth" target="_blank"><img src="img/svg/icons8-facebook.svg" alt="Facebook logo"></a>
+                        <a rel="noopener" href="https://www.linkedin.com/in/val-smyth-00b95771/" target="_blank" class="square"><img src="img/svg/icons8-linkedin.svg" alt="LinkedIn logo"></a>
+                        <a rel="noopener" href="https://www.instagram.com/callistowolfe/?hl=en" target="_blank" class="square"><img src="img/svg/icons8-instagram.svg" alt="Instagram logo"></a>
+                        <a rel="noopener" href="https://github.com/callistowolfe" target="_blank"><img src="img/svg/icons8-github.svg" alt="GitHub logo"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </header>
+    <main>
+        <section class="container-ui">
+            <div class="ui">
+                <h2>My love for cats</h2>
+                <p>The purpose of this section is to not only show off the cats I've had, loved and many I have had to say goodbye to; this section is to help me visualize some layout optons for an artists website.</p>
+            </div>
+            <div id="accordion" class="container-ui">
+                <h3>William</h3>
+                <div class="cats">
+                    <div>
+                        <img src="img/william-1-300x224.webp" alt="William">
+                        <p>William</p>
+                    </div>
+                    <div>
+                        <img src="img/william-2-300x400.webp" alt="William">
+                        <p>William</p>
+                    </div>
+                    <div>
+                        <img src="img/william-3-300x400.webp" alt="William">
+                        <p>William</p>
+                    </div>
+                </div>
+                <h3>Peanut</h3>
+                <div class="cats">
+                    <div>
+                        <img src="img/peanut-1-300x224.webp" alt="Peanut">
+                        <p>Peanut</p>
+                    </div>
+                    <div>
+                        <img src="img/peanut-2-300x400.webp" alt="Peanut">
+                        <p>Peanut</p>
+                    </div>
+                    <div>
+                        <img src="img/peanut-3-300x400.webp" alt="Peanut">
+                        <p>Peanut</p>
+                    </div>
+                </div>
+                <h3>Matthew</h3>
+                <div class="cats">
+                    <div>
+                        <img src="img/matthew-1-300x225.webp" alt="Matthew">
+                        <p>Matthew</p>
+                    </div>
+                    <div>
+                        <img src="img/matthew-3-300x200.webp" alt="Matthew">
+                        <p>Matthew</p>
+                    </div>
+                    <div>
+                        <img src="img/matthew-william-1-300x225.webp" alt="Matthew and William">
+                        <p>Matthew and William</p>
+                    </div>
+                </div>
+                <h3>Angus</h3>
+                <div class="cats">
+                    <div>
+                        <img src="img/angus-1-300x400.webp" alt="Angus">
+                        <p>Angus</p>
+                    </div>
+                    <div>
+                        <img src="img/angus-2-300x400.webp" alt="Angus">
+                        <p>Angus</p>
+                    </div>
+                    <div>
+                        <img src="img/angus-3-300x225.webp" alt="Anngus">
+                        <p>Angus</p>
+                    </div>
+                </div>
+                <h3>Toffee and Kiara</h3>
+                <div class="cats">
+                    <div>
+                        <img src="img/toffee-kiara-1-300x225.webp" alt="Toffee and Kiara">
+                        <p>Kiara and Toffee</p>
+                    </div>
+                    <div>
+                        <img src="img/toffee-kiara-2-300x400.webp" alt="Toffee and Kiara">
+                        <p>Toffee and Kiara</p>
+                    </div>
+                    <div>
+                        <img src="img/toffee-kiara-3-300x400.webp" alt="Toffee and Kiara">
+                        <p>Toffee and Kiara</p>
+                    </div>
+                </div>
+                <h3>Kiara</h3>
+                <div class="cats">
+                    <div>
+                        <img src="img/kiara-1-300x400.webp" alt="Kiara">
+                        <p>Kiara</p>
+                    </div>
+                    <div>
+                        <img src="img/kiara-2-300x200.webp" alt="Kiara">
+                        <p>Kiara</p>
+                    </div>
+                    <div>
+                        <img src="img/kiara-3-300x228.webp" alt="Kiara">
+                        <p>Kiara</p>
+                    </div>
+                </div>
+                <h3>Toffee</h3>
+                <div class="cats">
+                    <div>
+                        <img src="img/toffee-1-300x400.webp" alt="Toffee">
+                        <p>Toffee</p>
+                    </div>
+                    <div>
+                        <img src="img/toffee-2-300x223.webp" alt="Toffee">
+                        <p>Toffee</p>
+                    </div>
+                    <div>
+                        <img src="img/toffee-3-300x400.webp" alt="Toffee">
+                        <p>Toffee</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container-ui">
+            <div class="ui">
+                <h2>Want more Cats? Contact me!</h2>
+                <p>This is for demonstration of jQuery UI and Validation purposes only. No information is collected or stored anywhere.</p>
+            </div>
+            <div id="dialog" title="New Contact" class="contact">
+                <form class="cmxform" id="signupForm" method="post" action="jquery-success.php">
+                    <fieldset>
+                        <legend>Please fill everything out</legend>
+                      <p>
+                        <label for="fullname">Full name</label>
+                        <input id="fullname" name="fullname" />
+                      </p>
+                      <p>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" />
+                      </p>
+                      <p>
+                        <label for="url">Your URL</label>
+                        <input id="url" name="url" />
+                      </p>
+                      <p>
+                        <label for="age">Your Age</label>
+                        <input id="age" name="age" />
+                      </p>
+                      <p>
+                        <label for="credit_card">Credit Card</label>
+                        <input id="credit_card" name="credit_card" />
+                      </p>
+                      <p>
+                        <label for="password">Password</label>
+                        <input id="password" name="password" />
+                      </p>
+                      <p>
+                        <label for="confirm_password">Confirm password</label>
+                        <input id="confirm_password" name="confirm_password" />
+                      </p>
+                      <p>
+                        <input class="submit" type="submit" value="Submit" />
+                      </p>
+                    </fieldset>
+                </form>
+            </div>
+            <button id="opener">Open Dialog</button>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div>
+            <a href="/index" class="logos">
+                <img src="img/svg/logo.svg" alt="A howling wolf silhouette against a blue to purple gradient moon, Val Smyth's logo - Callistowolfe" class="logo">
+                <img src="img/github.svg" alt="Github handle Callistowolfe" class="logo git">
+            </a>
+        </div>
+        <div>
+            <h2>Val Smyth</h2>
+            <p>&copy; 2024 My first website</p>
+        </div>
+        <nav class="footnav">
+            <ul class="foot-menu">
+                <li><a href="/index">Home</a></li>
+                <li><a rel="noopener" href="https://blog.valsmyth.ca/" target="_blank">Blog</a></li>
+                <li><a href="/my-learning">My Learning</a></li>
+                <li><a href="license.txt" target="_blank">Licenses</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script type="text/javascript">
+        $().ready(function() {
+            $('#signupForm').validate({
+                rules: {
+                fullname: {
+                    required: true,
+                    minlength: 2
+                },
+                password: {
+                    required: true,
+                    minlength: 5
+                },
+                confirm_password: {
+                    equalTo: "#password"
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                url: {
+                    url: true
+                },
+                age: {
+                    required: true,
+                    number: true
+                },
+                credit_card: {
+                    number: true
+                }
+                },
+                messages: {
+                fullname: {
+                    required: "Please enter your full name",
+                    minlength: "Your full name must be at least 2 characters long"
+                },
+                password: {
+                    required: "Please provide a password",
+                    minlength: "Your password must be at least 5 characters long"
+                },
+                confirm_password: {
+                    equalTo: "Must match password above"
+                },
+                email: {
+                    required: "Please enter your email address",
+                    email: "Please enter a valid email address"
+                },
+                url: "Please enter a valid URL",
+                age: {
+                    required: "Please enter your age",
+                    number: "Please enter a valid number"
+                },
+                credit_card: "Please enter a valid number"
+                }
+            });
+            });
+
+            $( function() {
+                $( "#accordion" ).accordion();
+            } );
+
+            $( function() {
+                $( "#dialog" ).dialog({
+                autoOpen: false,
+                width: 900,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+                });
+
+                $( "#opener" ).on( "click", function() {
+                $( "#dialog" ).dialog( "open" );
+                });
+            } );
+        </script>
+</body>
+</html>

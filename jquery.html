@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Val Smyth - Web Developer: jQuery</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <section class="header">
+            <div class="nav">
+                <div>
+                    <a href="/index" class="logos">
+                        <img src="img/svg/logo.svg" alt="A howling wolf silhouette against a blue to purple gradient moon, Val Smyth's logo - Callistowolfe" class="logo">
+                        <img src="img/github.svg" alt="Github handle Callistowolfe" class="logo git">
+                    </a>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle Navigation">
+                    <svg width="30" height="30" viewBox="0 0 100 80" fill="#b600ff">
+                        <rect width="100" height="10"></rect>
+                        <rect y="30" width="100" height="10"></rect>
+                        <rect y="60" width="100" height="10"></rect>
+                    </svg>
+                </button>
+                <nav class="flex">
+                    <ul class="flex menu">
+                        <!-- Top Level-->
+                        <li><a href="/index">Home</a></li>
+                        <li><a rel="noopener" href="https://blog.valsmyth.ca/" target="_blank">Blog</a></li>
+                        <li>
+                            <a href="#" class="has-dropdown">Code</a>
+                            <ul class="dropdown">
+                                <li><a rel="noopener" href="https://seeds.valsmyth.ca/public/" target="_blank">PHP</a></li>
+                                <li><a href="/jquery-ui">jQuery UI</a></li>
+                                <li><a href="/jquery">jQuery</a></li>
+                                <li><a href="/materialize">MaterializeCSS</a></li>
+                                <li><a href="/ajax">AJAX</a></li>
+                                <li><a href="/maps-api">Maps API</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="has-dropdown">Design</a>
+                            <ul class="dropdown">
+                                <li><a href="/photography">Photography</a></li>
+                                <li><a href="/photoshop">Photoshop</a></li>
+                                <li><a href="/illustrator">Illustrator</a></li>
+                                <li><a href="/sketches">Sketches</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/my-learning">My Learning</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="banner-cover">
+                <div class="action">
+                    <h1>Val Smyth</h1>
+                    <div class="slider">
+                        <div class="slides">
+                            <h2>Web Developer</h2>
+                            <h2>Web Designer</h2>
+                            <h2>Photographer</h2>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <a rel="noopener" href="https://www.facebook.com/valerie.smyth" target="_blank"><img src="img/svg/icons8-facebook.svg" alt="Facebook logo"></a>
+                        <a rel="noopener" href="https://www.linkedin.com/in/val-smyth-00b95771/" target="_blank" class="square"><img src="img/svg/icons8-linkedin.svg" alt="LinkedIn logo"></a>
+                        <a rel="noopener" href="https://www.instagram.com/callistowolfe/?hl=en" target="_blank" class="square"><img src="img/svg/icons8-instagram.svg" alt="Instagram logo"></a>
+                        <a rel="noopener" href="https://github.com/callistowolfe" target="_blank"><img src="img/svg/icons8-github.svg" alt="GitHub logo"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </header>
+    <main>
+    <section class="container jquery">
+        <h2>jQuery Examples</h2>
+        <p>Flot Charts and Nivo Slider</p>
+    </section>
+    <section class="container flot">
+        <h2>My health</h2>
+        <div id="content">
+            <div class="demo-container">
+                <div id="placeholder" class="demo-placeholder" style="float:left; width:675px;"></div>
+                <p id="choices" class="demo-choices"></p>
+            </div>
+            <p>This is the recent blood preasure and heart rate readings.</p>
+            <p>Learning Flot has inspired my next personal project:</p>
+            <p>I want to create a health tracker, with a focus on accessibility for people with mitochondrial diseases and provide a better picture of their health for their healthcare team.</p>
+            <p>I am excited to learn new languages and sharpen my existing skills to make this project happen!</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div id="slider" class="theme-bar">
+            <img src="img/william-1-300x224.webp" alt="William lived to be 19 years old." title="This was William, he chose me."/>
+            <img src="img/peanut-1-300x224.webp" alt="Peanut lived to be 19 years old." title="This was Peanut, she was our scrappy girl."/>
+            <img src="img/matthew-1-300x225.webp" alt="Matthew lived to be 20 years old." title="This was Matthew, we gave him to our kids' other set of parents." />
+            <img src="img/angus-3-300x225.webp" alt="Angus was guessed to be 6, but our vet figured he was closer to 14+" title="This was Angus, we only had him for a year and a half." />
+            <img src="img/toffee-kiara-1-300x225.webp" alt="Toffee and Kiara" title="We decided to pick up littermates so they wouldn't be lonely." />
+            <img src="img/kiara-2-300x200.webp" alt="Kiara is about 6 months old." title="This is Kiara, she's very talkative and brave." />
+            <img src="img/toffee-2-300x223.webp" alt="Toffee is about 6 months old." title="This is Toffee, she likes to climb us and ride our shoulders." />
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div>
+        <a href="/index" class="logos">
+            <img src="img/svg/logo.svg" alt="A howling wolf silhouette against a blue to purple gradient moon, Val Smyth's logo - Callistowolfe" class="logo">
+            <img src="img/github.svg" alt="Github handle Callistowolfe" class="logo git">
+        </a>
+    </div>
+    <div>
+        <h2>Val Smyth</h2>
+        <p>&copy; 2024 My first website</p>
+    </div>
+    <nav class="footnav">
+        <ul class="foot-menu">
+            <li><a href="/index">Home</a></li>
+            <li><a rel="noopener" href="https://blog.valsmyth.ca/" target="_blank">Blog</a></li>
+            <li><a href="/my-learning">My Learning</a></li>
+            <li><a href="license.txt" target="_blank">Licenses</a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src="js/jquery.nivo.slider.pack.js"></script>
+<script language="javascript" type="text/javascript" src="js/flot.js"></script>
+<script scr="js/jquery.nivo.slider.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        var datasets = {
+            "systolic": {
+                label: "Blood Pressure Systolic",
+                data: [[0, 141], [1, 137], [2, 136], [3, 123], [4, 123], [5, 122], [6, 135], [7, 134], [8, 125], [9, 142]],
+            },
+            "diastolic": {
+                label: "Blood Pressure Diastolic",
+                data: [[0, 79], [1, 81], [2, 74], [3, 82], [4, 77], [5, 76], [6, 80], [7, 79], [8, 73], [9, 80]],
+            },
+            "heart_rate": {
+                label: "Heart Rate",
+                data: [[0, 87], [1, 94], [2, 60], [3, 85], [4, 92], [5, 94], [6, 60], [7, 87], [8, 92], [9, 94]],
+            }
+        };
+
+        console.log(datasets);
+        var i = 0;
+        $.each(datasets, function (key, val) {
+            val.color = i;
+            ++i;
+        });
+
+        var choiceContainer = $("#choices");
+        $.each(datasets, function (key, val) {
+            choiceContainer.append("<br/><input type='checkbox' name='" + key +
+                "' checked='checked' id='id" + key + "'></input>" +
+                "<label for='id" + key + "'>" + val.label + "</label>");
+        });
+
+        choiceContainer.find("input").click(plotAccordingToChoices);
+
+        function plotAccordingToChoices() {
+            var data = [];
+
+            choiceContainer.find("input:checked").each(function () {
+                var key = $(this).attr("name");
+                if (key && datasets[key]) {
+                    data.push(datasets[key]);
+                }
+            });
+
+            if (data.length > 0) {
+                $.plot("#placeholder", data, {
+                    yaxis: {
+                        min: 0
+                    },
+                    xaxis: {
+                        ticks: [[0, '2025-03-01'], [1, '2025-03-02'], [2, '2025-03-03'], [3, '2025-03-04'], [4, '2025-03-05'], [5, '2025-03-06'], [6, '2025-03-07'], [7, '2025-03-08'], [8, '2025-03-09'], [9, '2025-03-10']],
+                        tickDecimals: 0
+                    }
+                });
+            }
+        }
+
+        plotAccordingToChoices();
+    });
+
+    $(document).ready(function() {
+    $('#slider').nivoSlider({
+        pauseTime: 5500,
+    });
+});
+</script>
+</body>
+</html>

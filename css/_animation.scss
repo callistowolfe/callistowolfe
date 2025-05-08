@@ -17,3 +17,31 @@
         transform: translateX(0vw);
     }
   }
+
+  .slider {
+    width: 400px;
+    overflow: hidden;
+    height: 3rem;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    animation: slideText 9s infinite;
+}
+
+.slides h2 {
+    min-width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+@keyframes slideText {
+    0%   { transform: translateX(0); }
+    22%  { transform: translateX(0); }
+    33%  { transform: translateX(-100%); }
+    55%  { transform: translateX(-100%); }
+    66%  { transform: translateX(-200%); }
+    88%  { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}

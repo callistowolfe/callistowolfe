@@ -3,202 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first website</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Val Smyth - Web Developer</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css?v=2">
     <script src="js/main.js" defer></script>
 </head>
-<body>
-    <header class="flex">
-        <a href="index.html"><h1>Welcome to my first website!</h1></a>
-        <nav>
-            <ul class="flex">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <img src="img/drop.png" alt="I'm sad that I lost my cat." class="tear">
-            <div class="cover">
-                <h2>There's more on the way.</h2>
-                <p>I've been a little distracted.</p>
+<body class="front">
+    <header>
+        <section class="header">
+            <div class="nav">
+                <div>
+                    <a href="/index" class="logos">
+                        <img src="img/svg/logo.svg" alt="A howling wolf silhouette against a blue to purple gradient moon, Val Smyth's logo - Callistowolfe" class="logo">
+                        <img src="img/github.svg" alt="Github handle Callistowolfe" class="logo git">
+                    </a>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle Navigation">
+                    <svg width="30" height="30" viewBox="0 0 100 80" fill="#b600ff">
+                        <rect width="100" height="10"></rect>
+                        <rect y="30" width="100" height="10"></rect>
+                        <rect y="60" width="100" height="10"></rect>
+                    </svg>
+                </button>
+                <nav class="flex">
+                    <ul class="flex menu">
+                        <!-- Top Level-->
+                        <li><a href="/index">Home</a></li>
+                        <li><a rel="noopener" href="https://blog.valsmyth.ca/" target="_blank">Blog</a></li>
+                        <li>
+                            <a href="#" class="has-dropdown">Code</a>
+                            <ul class="dropdown">
+                                <li><a rel="noopener" href="https://seeds.valsmyth.ca/public/" target="_blank">PHP</a></li>
+                                <li><a href="/jquery-ui">jQuery UI</a></li>
+                                <li><a href="/jquery">jQuery</a></li>
+                                <li><a href="/materialize">MaterializeCSS</a></li>
+                                <li><a href="/ajax">AJAX</a></li>
+                                <li><a href="/maps-api">Maps API</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="has-dropdown">Design</a>
+                            <ul class="dropdown">
+                                <li><a href="/photography">Photography</a></li>
+                                <li><a href="/photoshop">Photoshop</a></li>
+                                <li><a href="/illustrator">Illustrator</a></li>
+                                <li><a href="/sketches">Sketches</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/my-learning">My Learning</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="banner-cover">
+                <div class="action">
+                    <h1>Val Smyth</h1>
+                    <div class="slider">
+                        <div class="slides">
+                            <h2>Web Developer</h2>
+                            <h2>Web Designer</h2>
+                            <h2>Photographer</h2>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <a rel="noopener" href="https://www.facebook.com/valerie.smyth" target="_blank"><img src="img/svg/icons8-facebook.svg" alt="Facebook logo"></a>
+                        <a rel="noopener" href="https://www.linkedin.com/in/val-smyth-00b95771/" target="_blank" class="square"><img src="img/svg/icons8-linkedin.svg" alt="LinkedIn logo"></a>
+                        <a rel="noopener" href="https://www.instagram.com/callistowolfe/?hl=en" target="_blank" class="square"><img src="img/svg/icons8-instagram.svg" alt="Instagram logo"></a>
+                        <a rel="noopener" href="https://github.com/callistowolfe" target="_blank"><img src="img/svg/icons8-github.svg" alt="GitHub logo"></a>
+                    </div>
+                </div>
             </div>
         </section>
-        <div class="container grid">
-            <h2>My love for cats</h2>
-            <p>The purpose of this section is to not only show off the cats I've had, loved and many I have had to say goodbye to; this section is to help me visualize some layout optons for an artists website.</p>
-            <section class="cats">
-                <article>
-                    <img src="img/william-1-300x224.webp" alt="William">
-                    <div>
-                        <h3>William</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/william-2-300x400.webp" alt="William">
-                    <div>
-                        <h3>William</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/william-3-300x400.webp" alt="William">
-                    <div>
-                        <h3>William</h3>
-                        <p></p>
-                    </div>
-                </article>
-            </section>
-            <section class="cats">
-                <article>
-                    <img src="img/peanut-1-300x224.webp" alt="Peanut">
-                    <div>
-                        <h3>Peanut</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/peanut-2-300x400.webp" alt="Peanut">
-                    <div>
-                        <h3>Peanut</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/peanut-3-300x400.webp" alt="Peanut">
-                    <div>
-                        <h3>Peanut</h3>
-                        <p></p>
-                    </div>
-                </article>
-            </section>
-            <section class="cats">
-                <article>
-                    <img src="img/matthew-1-300x225.webp" alt="Peanut">
-                    <div>
-                        <h3>Matthew</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/matthew-3-300x200.webp" alt="Matthew">
-                    <div>
-                        <h3>Matthew</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/matthew-william-1-300x225.webp" alt="Matthew and William">
-                    <div>
-                        <h3>Matthew and William</h3>
-                        <p></p>
-                    </div>
-                </article>
-            </section>
-            <section class="cats">
-                <article>
-                    <img src="img/angus-1-300x400.webp" alt="Angus">
-                    <div>
-                        <h3>Angus</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/angus-2-300x400.webp" alt="Angus">
-                    <div>
-                        <h3>Angus</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/angus-3-300x225.webp" alt="Anngus">
-                    <div>
-                        <h3>Angus</h3>
-                        <p></p>
-                    </div>
-                </article>
-            </section>
-            <section class="cats">
-                <article>
-                    <img src="img/toffee-kiara-1-300x225.webp" alt="Toffee and Kiara">
-                    <div>
-                        <h3>Kiara and Toffee</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/toffee-kiara-2-300x400.webp" alt="Toffee and Kiara">
-                    <div>
-                        <h3>Toffee and Kiara</h3>
-                        <p></p>
-                    </div>
-                </article>
-            </section>
-            <section class="cats">
-                <article>
-                    <img src="img/kiara-1-300x400.webp" alt="Kiara">
-                    <div>
-                        <h3>Kiara</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/kiara-2-300x200.webp" alt="Kiara">
-                    <div>
-                        <h3>Kiara</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/kiara-3-300x228.webp" alt="Kiara">
-                    <div>
-                        <h3>Kiara</h3>
-                        <p></p>
-                    </div>
-                </article>
-            </section>
-            <section class="cats">
-                <article>
-                    <img src="img/toffee-1-300x400.webp" alt="Toffee">
-                    <div>
-                        <h3>Toffee</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/toffee-2-300x223.webp" alt="Toffee">
-                    <div>
-                        <h3>Toffee</h3>
-                        <p></p>
-                    </div>
-                </article>
-                <article>
-                    <img src="img/toffee-3-300x400.webp" alt="Toffee">
-                    <div>
-                        <h3>Toffee</h3>
-                        <p></p>
-                    </div>
-                </article>
-            </section>
-        </div>
 
+    </header>
+    <main>
+        <section class="container contact">
+            <img src="img/about-image.webp" alt="A pictre of me in the butterfly house, at the University of Alberta botanic garden.">
+            <div>
+                <h2>About me</h2>
+                <p>Humans discovered fire and then I was born.</p>
+                <p>But seriously, my first computer was a Tandy Color 2. Not the fancy one with a hard drive or monitor, mine was the giant keyboard you plugged into your TV and you had to save your code to floppy disks. I taught myself some Basic before it became the first computer programming class available in my high school. Since then, I've taught myself how to code new game items for a private Ultima Online server and eventually stumbled into HTML while role playing with creative writing on message boards.</p>
+                <p>When the opportunity to change careers arrived, I enrolled at NAIT to get my DMIT - Web Design and Development degree.</p>
+                <p>I pride myself on knowing where to look, and learn from credible sources when I don't know the answers to something. I have become the person that I needed when I was growing up. I am a resource, a teacher, and I like connecting people with their needs.</p>
+                <p>I enjoy coding - HTML5, CSS3 Sass, PHP, SQL, Codeigniter, React & JavaScript. I love to see what they can do and find creative ways to use them. Learning is my passion!</p>
+            </div>
+        </section>
+        <section class="container cards">
+            <h2>My Skills</h2>
+            <div>
+                <img src="img/svg/icons8-code-64.png" alt="Code icon">
+                <h3>Development</h3>
+                <p>Coding is fun! HTML5, CSS3, Sass, PHP, SQL, JavaScript, Bootstrap, Tailwind, jQuery. I'm eager to learn more!</p>
+            </div>
+            <div>
+                <img src="img/svg/icons8-wordpress.svg" alt="WordPress icon">
+                <h3>WordPress</h3>
+                <p>Discovered that WordPress is pretty cool, I can code a classic theme or block theme to showcase whatever you are looking for! I'm also learning how to create plugins.</p>
+            </div>
+            <div>
+                <img src="img/svg/icons8-adobe.svg" alt="Adobe icon">
+                <h3>PS & AI</h3>
+                <p>I have many years experience with free alternatives, prior to learning the Adobe products. Check out some of my work.</p>
+            </div>
+            <div>
+                <img src="img/svg/icons8-camera.svg" alt="Camera icon">
+                <h3>Photography</h3>
+                <p>While everyone has a camera on their phone, I use a DSLR camera for product shots. See my growing collection here!</p>
+            </div>
+            <div>
+                <img src="img/svg/icons8-figma.svg" alt="Figma icon">
+                <h3>Figma</h3>
+                <p>I'm comfortable with using figma to create and test wireframes, samples are available here.</p>
+            </div>
+            <div>
+                <img src="img/svg/icons8-github.svg" alt="">
+                <h3>Github</h3>
+                <p>I had Github to grab firmware for my 3D Printer before I attended NAIT. It's filled with past assignments, and growing with personal projects.</p>
+            </div>
+        </section>
+        <section class="container contact">
+            <div class="contact-me">
+                <h2>Contact</h2>
+                <p>I live in Edmonton, Alberta</p>
+                <p>Reach out to me phone or email, just click the links below.</p>
+                <ul>
+                    <li><a href="mailto:val.s.smyth@gmail.com" taget="_blank" title="contact-email">Email: val.s.smyt@gmail.com</a></li>
+                    <li><a href="tel:7809652353" title="contact-phone">780-965-2353</a></li>
+                </ul>
+                <!-- <div>
+                    <h3>My Services</h3>
+                </div> -->
+            </div>
+            <img src="img/contact-image.webp" alt="Image of me with my Angus in the background (rest in peace)">
+        </section>
+        <section class="container">
+            <h2>Clients</h2>
+            <div class="client-logos">
+                <div class="logo-scroll">
+                    <a href="https://cosmicexpressions.ca" target="_blank" rel="noopener">
+                        <img src="img/clients/cosmic-expressions.png" alt="Cosmic Expressions" class="cosmic">
+                    </a>
+                    <!-- <a href="">
+                        <img src="img/clients/client2.png" alt="Kelley Keehn">
+                    </a> -->
+                    <!-- <a href="">
+                        <img src="img/clients/client3.png" alt="Good Body Massage">
+                    </a> -->
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <section class="flex">
+        <div>
+            <a href="/index" class="logos">
+                <img src="img/svg/logo.svg" alt="A howling wolf silhouette against a blue to purple gradient moon, Val Smyth's logo - Callistowolfe" class="logo">
+                <img src="img/github.svg" alt="Github handle Callistowolfe" class="logo git">
+            </a>
+        </div>
+        <div>
             <h2>Val Smyth</h2>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </section>
-        <p>&copy; 2024 My first website</p>
+            <p>&copy; 2024 My first website</p>
+        </div>
+        <nav class="footnav">
+            <ul class="foot-menu">
+                <li><a href="/index">Home</a></li>
+                <li><a rel="noopener" href="https://blog.valsmyth.ca/" target="_blank">Blog</a></li>
+                <li><a href="/my-learning">My Learning</a></li>
+                <li><a href="license.txt" target="_blank">Licenses</a></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>

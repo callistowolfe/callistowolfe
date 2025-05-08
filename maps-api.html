@@ -1,0 +1,286 @@
+<!-- <?php
+    $key = 'AIzaSyB9X7vtoV5FVuLorYO3po1k5zSrPdg23-A';
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Val Smyth - Web Developer: Maps API</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+
+    <script type="text/javascript">
+
+</script>
+<script defer async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9X7vtoV5FVuLorYO3po1k5zSrPdg23-A&callback=initialize_map&loading=async"></script>
+<script>
+  function initialize_map() {
+    document.getElementById("locationDescription").innerHTML = "";
+    var map_options = {
+        center: new google.maps.LatLng(52.870680, -118.071593),
+        zoom: 14,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        panControl: false,
+        scaleControl: false,
+        streetViewControl: false,
+        overviewMapControl: false,
+        mapTypeControl: false,
+        mapTypeControlOptions: {
+          style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+        },
+        zoomControl: false,
+        zoomControlOptions: {
+          style: google.maps.ZoomControlStyle.SMALL
+        }
+    };
+
+    var map = new google.maps.Map(document.getElementById("map_canvas"), map_options);
+
+    var jasperMarker1 = new google.maps.Marker({
+      position: new google.maps.LatLng(52.878878, -118.086378),
+      map: map,
+      icon: "img/svg/icons8-museum-30.png",
+      title: "Jasper-Yellowhead Museum & Archives"
+    });
+
+    google.maps.event.addListener(jasperMarker1, 'click', function() {
+      document.getElementById("locationDescription").innerHTML = "<h2>Jasper-Yellowhead Museum & Archives</h2><div class=\"flex-box\"><img src=\"img/svg/archives.jpg\" alt=\"The front of the Jasper-Yellowhead Museum & Archives\"><p>The Jasper-Yellowhead Historical Society started working toward a museum in 1978. In 1985, the Society purchased a partially completed building on Pyramid Lake Road. In 1990 the lower floor of this structure was completed, and the Society\'s office and Jasper Museum archives moved in. With rotating exhibits constantly breathing fresh life into our spaces, there\'s always something new to discover, making every visit a journey of cultural and historic exploration. Join us in celebrating the ever-changing world and be part of an endless conversation of Jasper\'s past and present. </p></div>";
+
+    });
+
+    var jasperMarker2 = new google.maps.Marker({
+      position: new google.maps.LatLng(52.877674, -118.063439),
+      map: map,
+      icon: "img/svg/icons8-house-30.png",
+      title: "Henry House"
+    });
+
+    google.maps.event.addListener(jasperMarker2, 'click', function() {
+      document.getElementById("locationDescription").innerHTML = "<h2>Henry House</h2><div class=\"flex-box\"><img src=\"img/svg/henry.jpg\" alt=\"The plaque at Jasper House\"><p>Founded in 1811 by the North West Company. After the discovery of the Athabaska Pass and its adoption in 1812, as the regular trade route to and from the Columbia, this post became, and remained for abut twenty years, an important point in the transportation system of the North West Company and later of the Hudson's Bay Company. Here began the difficult land passage across the Rocky Mountains.</p></div>";
+    });
+
+    var jasperMarker3 = new google.maps.Marker({
+      position: new google.maps.LatLng(52.867261, -118.050050),
+      map: map,
+      icon: "img/svg/icons8-trekking-30.png",
+      title: "Old Fort Point"
+    });
+
+    google.maps.event.addListener(jasperMarker3, 'click', function() {
+      document.getElementById("locationDescription").innerHTML = "<h2>Old Fort Point</h2><p>Old Fort Point is a mountain located in Jasper National Park, Alberta, Canada. The mountain is located at the confluence of the Athabasca River and the Miette River. The mountain is a popular hiking destination in Jasper National Park.</p><img src=\"img/svg/Old-Fort-Point.jpg\" alt=\"Image of the view from a hiking trail at Old Fort Point.\" class=\"mt\">";
+    });
+
+    var trails = {
+        strokeColor: "#c86cdf",
+        strokeOpacity: 0.8,
+        strokeWeight: 3,
+        fillColor: "#c86cdf",
+        fillOpacity: 0.35,
+        map:map,
+        center: new google.maps.LatLng(52.867261, -118.050050),
+        radius: 300
+     };
+
+    var trailCircle = new google.maps.Circle(trails);
+
+  }
+
+  function go_to_garden_center() {
+    document.getElementById("locationDescription").innerHTML = "";
+    var map_options = {
+        center: new google.maps.LatLng(53.571950, -113.273554),
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
+    };
+
+    var map = new google.maps.Map(document.getElementById("map_canvas"), map_options);
+
+    var marker1 = new google.maps.Marker({
+        position: new google.maps.LatLng(53.571950, -113.273554),
+        map: map,
+        icon: "img/svg/icons8-plant-48.png",
+        title: "Greenland Garden Centre"
+    });
+
+    var marker2 = new google.maps.Marker({
+        position: new google.maps.LatLng(53.579156, -113.272505),
+        map: map,
+        icon: "img/svg/icons8-horse-48.png",
+        title: "Jackson Homesteaders"
+    });
+
+    var homesteaders = {
+        strokeColor: "#c86cdf",
+        strokeOpacity: 0.8,
+        strokeWeight: 3,
+        fillColor: "#c86cdf",
+        fillOpacity: 0.35,
+        map:map,
+        center: new google.maps.LatLng(53.579156, -113.272505),
+        radius: 200
+     };
+
+    var homeCircle = new google.maps.Circle(homesteaders);
+
+    var gardenCenterBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(53.573299, -113.275149),
+        new google.maps.LatLng(53.572085, -113.272837)
+    );
+
+     var gardenCenter = {
+        strokeColor: "#8cf582",
+        strokeOpacity: 0.8,
+        strokeWeight: 3,
+        fillColor: "#8cf582",
+        fillOpacity: 0.35,
+        map:map,
+        bounds: gardenCenterBounds
+     };
+
+     var myRectangle = new google.maps.Rectangle(gardenCenter);
+
+     var infoGarden = new google.maps.InfoWindow({
+        content: "<div class=\"info-window flex\"><h2>Greenland Garden Center</h2><p>Want to develop your green thumb? Check out <a href=\"https://greenlandgarden.com/\">Greenland Garden Center</a> to see products, tips and become a member.</p><p><img src=\"img/Greenland-logo-e1611085887838.png\" alt=\"The Greenland Garden Center Logo\"></p></div>"
+      });
+
+    google.maps.event.addListener(marker1, 'click', function() {
+      infoGarden.open(map, marker1);
+    });
+
+    infoGarden.open(map, marker1);
+
+    var infoHomestead = new google.maps.InfoWindow({
+        content: "<div class=\"info-window flex\"><h2>Jackson Homesteaders</h2><p>Looking for a place to board your horse? Check out <a href=\"https://www.jacksonhomesteaders.ca/\">Jackson Homesteaders</a> for boarding, training and lessons.</p><p><img src=\"img/jackson.jpg\" alt=\"Jackson Homesteaders Tractor\"></p></div>"
+    });
+
+    google.maps.event.addListener(marker2, 'click', function() {
+        infoHomestead.open(map, marker2);
+    });
+
+  }
+</script>
+</head>
+<body class="front maps">
+    <header>
+        <section class="header">
+            <div class="nav">
+                <div>
+                    <a href="index.html" class="logos">
+                        <img src="img/svg/logo.svg" alt="A howling wolf silhouette against a blue to purple gradient moon, Val Smyth's logo - Callistowolfe" class="logo">
+                        <img src="img/github.svg" alt="Github handle Callistowolfe" class="logo git">
+                    </a>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle Navigation">
+                    <svg width="30" height="30" viewBox="0 0 100 80" fill="#b600ff">
+                        <rect width="100" height="10"></rect>
+                        <rect y="30" width="100" height="10"></rect>
+                        <rect y="60" width="100" height="10"></rect>
+                    </svg>
+                </button>
+                <nav class="flex">
+                    <ul class="flex menu">
+                        <!-- Top Level-->
+                        <li><a href="/index">Home</a></li>
+                        <li><a rel="noopener" href="https://blog.valsmyth.ca/" target="_blank">Blog</a></li>
+                        <li>
+                            <a href="#" class="has-dropdown">Code</a>
+                            <ul class="dropdown">
+                                <li><a rel="noopener" href="https://seeds.valsmyth.ca/public/" target="_blank">PHP</a></li>
+                                <li><a href="/jquery-ui">jQuery UI</a></li>
+                                <li><a href="/jquery">jQuery</a></li>
+                                <li><a href="/materialize">MaterializeCSS</a></li>
+                                <li><a href="/ajax">AJAX</a></li>
+                                <li><a href="/maps-api">Maps API</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="has-dropdown">Design</a>
+                            <ul class="dropdown">
+                                <li><a href="/photography">Photography</a></li>
+                                <li><a href="/photoshop">Photoshop</a></li>
+                                <li><a href="/illustrator">Illustrator</a></li>
+                                <li><a href="/sketches">Sketches</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/my-learning">My Learning</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="banner-cover">
+                <div class="action">
+                    <h1>Val Smyth</h1>
+                    <div class="slider">
+                        <div class="slides">
+                            <h2>Web Developer</h2>
+                            <h2>Web Designer</h2>
+                            <h2>Photographer</h2>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <a rel="noopener" href="https://www.facebook.com/valerie.smyth" target="_blank"><img src="img/svg/icons8-facebook.svg" alt="Facebook logo"></a>
+                        <a rel="noopener" href="https://www.linkedin.com/in/val-smyth-00b95771/" target="_blank" class="square"><img src="img/svg/icons8-linkedin.svg" alt="LinkedIn logo"></a>
+                        <a rel="noopener" href="https://www.instagram.com/callistowolfe/?hl=en" target="_blank" class="square"><img src="img/svg/icons8-instagram.svg" alt="Instagram logo"></a>
+                        <a rel="noopener" href="https://github.com/callistowolfe" target="_blank"><img src="img/svg/icons8-github.svg" alt="GitHub logo"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </header>
+    <main>
+        <nav class="container">
+            <ul class="map flex">
+                <li><a href="javascript:initialize_map()">Jasper Map</a></li>
+                <li><a href="javascript:go_to_garden_center()">Sherwood Park Map</a></li>
+            </ul>
+        </nav>
+
+        <div class="map-container">
+            <div class="content">
+                <h1>Looking for some great places to visit?</h1>
+                <p>Here are a few neat places available right here in Alberta!</p>
+                <p>First we have Jasper, a lovely city in a National Park, surrounded by picturesque views of forests, lakes and rivers. There are historical sites, hiking trails and a museum. Plenty more to see and do! Click to learn more.</p>
+                <p>Next we have Sherwood Park, a lovely community just outside of Edmonton. There are some great places to visit here too! A garden center and a horse boarding facility. Click to learn more.</p>
+                <p>The places to explore are not limited to the markers available in these maps, seek out the information center in Jasper to learn more about what the National Park offers!</p>
+            </div>
+            <div id="map_canvas"></div>
+        </div>
+
+        <div class="location-container">
+                <div id="locationDescription"></div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div>
+            <a href="/index" class="logos">
+                <img src="img/svg/logo.svg" alt="A howling wolf silhouette against a blue to purple gradient moon, Val Smyth's logo - Callistowolfe" class="logo">
+                <img src="img/github.svg" alt="Github handle Callistowolfe" class="logo git">
+            </a>
+        </div>
+        <div>
+            <h2>Val Smyth</h2>
+            <p>&copy; 2024 My first website</p>
+        </div>
+        <nav class="footnav">
+            <ul class="foot-menu">
+                <li><a href="/index">Home</a></li>
+                <li><a rel="noopener" href="https://blog.valsmyth.ca/" target="_blank">Blog</a></li>
+                <li><a href="/my-learning">My Learning</a></li>
+                <li><a href="license.txt" target="_blank">Licenses</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,7 +1,11 @@
-.container,
-.footer {
+@import 'colors';
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 3rem auto;
     padding: 1rem;
 }
 
@@ -19,6 +23,7 @@
 
 .cover {
     background-color: #EDEDED;
+    -webkit-backdrop-filter: blur();
     backdrop-filter: blur(3px);
     border-radius: 8px;
     margin: 24px;
@@ -33,26 +38,404 @@
     padding: 2rem;
 }
 
-.flex,
-section {
+.flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1rem;
-    justify-content: center;
-    h2,
-    p:first-of-type {
-        grid-column: 1 / -1;
+.cards {
+    flex-wrap: wrap;
+    img {
+        width: 100px;
+    }
+    h2 {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0 1.5rem;
+    }
+    div {
+        align-content: center;
+        align-items: center;
+        width: calc(100% / 3 - 2rem);
+        min-width: 300px;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1rem;
+        height: 330px;
+        border: 1px solid #333;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px #777777;
+}
+    div h3 {
+        margin-bottom: 1rem;
     }
 }
 
+.contact {
+    padding-top: 2rem;
+    h2, p, li {
+        margin-bottom: 1rem;
+    }
+    div {
+        width: calc(50% - 1rem);
+    }
+    img {
+        width: calc(50% - 1rem);
+        -webkit-border-radius: 90px 90px 90px 0;
+        -moz-border-radius: 90px 90px 90px 0;
+        -ms-border-radius: 90px 90px 90px 0;
+        -o-border-radius: 90px 90px 90px 0;
+        border-radius: 90px 90px 90px 0;
+}
+    .contact-me {
+    background-color: $primary;
+    color: white;
+    padding: 2rem;
+    -webkit-border-radius: 90px 90px 0 90px;
+    -moz-border-radius: 90px 90px 0 90px;
+    -ms-border-radius: 90px 90px 0 90px;
+    -o-border-radius: 90px 90px 0 90px;
+    border-radius: 90px 90px 0 90px;
+    a, p {
+        font-size: 1.5rem;
+        color: white;
+    }
+}
+}
+
+.photography {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 1rem;
+    .photo,
+    .photos {
+        margin-bottom: 3rem;
+    }
+    .photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2,
+        p {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        img {
+            width: 1200px;
+            margin-bottom: 3rem;
+        }
+    }
+    .photos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        margin: 0 auto;
+        img {
+            margin-bottom: 2rem;
+        }
+        img:last-of-type {
+            width: 1200px;
+        }
+    }
+}
+
+.outerWrap {
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ajax-wrap {
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thisCD {
+    border: 1px solid #999;
+    padding: 5px;
+    margin-top: 10px;
+    width: 200px;
+    background-color:#fff;
+    text-align: left;
+}
+
+.displayCategory {
+    color: $primary;
+}
+
+.displayInfo{
+    font-weight: normal;
+    color: #900;
+}
+
+.cdImage {
+    display: block;
+}
+
+.displayDescription {
+    font-size: 85%;
+    padding: 7px;
+}
+
+.ajax-nav {
+    padding: 5px 18px;
+    background:#F9EDC5;
+    height: 20px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #ccc;
+}
+
+.ajax-nav li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    font-weight: bold;
+}
+
+.ajax-nav a {
+    color: #175763;
+    font-size: 16px;
+    font-family: arial;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ajax-main {
+    width: 800px;
+    padding: 10px;
+}
+
+.ajax-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 1200px;
+}
+
+.sidebar {
+    width: 220px;
+    padding: 10px;
+    background: #eaeaea;
+    box-shadow: -2px 0px 3px #888888;
+}
+
+.sidebar a{
+    color: #175763;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.sideBarHeading{
+    background-color:#666;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    font-family: georgia;
+}
+
+.sideDisplay{
+    width: 200px;
+    height: 100%;
+}
+
+
+.ajax footer {
+    width: 100%;
+}
+
+.client-logos {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: left;
+  }
+
+  .logo-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+  }
+
+  .logo-scroll img {
+    height: 80px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+.cosmic {
+    background-color: #800080;
+}
+
+.container-ui {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.ui {
+    min-width: 932px;
+    margin: 2rem auto;
+}
+
 .cats {
-    grid-column: 1 / -1;
-    align-self: start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     gap: 1rem;
+    width: 100%;
+}
+
+/* Form Styles */
+
+/**********************************
+
+Use: cmxform template
+
+***********************************/
+form.cmxform fieldset {
+	margin-bottom: 10px;
+}
+
+form.cmxform legend {
+	padding: 0 2px;
+	font-weight: bold;
+	_margin: 0 -7px; /* IE Win */
+}
+
+form.cmxform label {
+	display: inline-block;
+	line-height: 1.8;
+	vertical-align: top;
+	cursor: hand;
+}
+
+form.cmxform fieldset p {
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+}
+
+form.cmxform fieldset fieldset {
+	border: none;
+	margin: 3px 0 0;
+}
+
+form.cmxform fieldset fieldset legend {
+	padding: 0 0 5px;
+	font-weight: normal;
+}
+
+form.cmxform fieldset fieldset label {
+	display: block;
+	width: auto;
+}
+
+form.cmxform label { width: 100px; } /* Width of labels */
+form.cmxform fieldset fieldset label { margin-left: 103px; } /* Width plus 3 (html space) */
+form.cmxform label.error {
+	margin-left: 103px;
+	width: 220px;
+}
+
+form.cmxform input.submit {
+	margin-left: 103px;
+}
+
+/*\*//*/ form.cmxform legend { display: inline-block; } /* IE Mac legend fix */
+
+form.cmxform {
+    width: 900px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #9da4e2;
+}
+
+form.cmxform legend {
+	  padding-left: 0;
+}
+
+form.cmxform legend, form.cmxform label {
+	  color: #333;
+}
+
+form.cmxform fieldset {
+    border: none;
+    /* border-top: 1px solid #C9DCA6;
+    background: url(../images/cmxform-fieldset.gif) left bottom repeat-x; */
+    background-color: #9da4e2;
+    width: 100%;
+}
+
+form.cmxform fieldset fieldset {
+	  background: none;
+}
+
+form.cmxform fieldset p, form.cmxform fieldset fieldset {
+    padding: 5px 10px 7px;
+    /* background: url(../images/cmxform-divider.gif) left bottom repeat-x; */
+}
+
+form.cmxform label.error, label.error {
+    /* remove the next line when you have trouble in IE6 with labels in list */
+    color: red;
+    font-style: italic
+}
+div.error { display: none; }
+input {	border: 1px solid black; }
+input.checkbox { border: none }
+input:focus { border: 1px dotted black; }
+input.error { border: 1px dotted red; }
+form.cmxform .gray * { color: gray; }
+
+#dialog {
+    background-color: #9da4e2;
+    width: 100%;
+}
+
+#opener {
+    max-width: fit-content;
+    margin: 0 0 61px 61px;
+}
+
+.signature-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+.signature-container canvas {
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.signature-background {
+    background-color: #9da4e2;
+    padding: 1rem;
+    border: 3px solid #000;
 }

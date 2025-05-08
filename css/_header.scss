@@ -1,9 +1,210 @@
+@import "colors";
+
 header {
-    padding: 1rem;
-    margin: 0 auto;
+    background: url('../img/banner-800x523.webp') center / cover no-repeat;
+    height: calc(100vh);
     a {
-        color: purple;
+        color: $primary;
         text-decoration: none;
         padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+    .logos {
+        width: 12rem;
+        padding: 1rem;
+    }
+    .logo {
+        max-width: 150px;
+        min-width: 75px;
+        color: $primary;
+    }
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+    background-color: $bg-cover;
+    height: 100%;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+
+.menu-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 12;
+    svg {
+        fill: #b600ff;
+        transition: fill 0.3s ease;
+    }
+    &.open svg {
+        fill: black;
+    }
+}
+
+.show-nav {
+    right: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.header nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 12rem;
+    height: 100%;
+    background-color: $bg-1;
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+    .flex {
+            align-items: flex-start;
+            flex-direction: column;
+            z-index: 11;
+        }
+}
+
+.header nav.show-nav {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.header nav.show-nav {
+    display: flex;
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 998;
+    display: none;
+}
+
+.nav-overlay.active {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    flex-direction: column;
+    background-color: $bg-1;
+    padding-left: 1rem;
+
+    a {
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+    }
+}
+
+.dropdown.show {
+    display: flex;
+}
+
+.banner-cover {
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto;
+    max-width: 400px;
+}
+
+.action {
+    h1 {
+    background-color: $primary;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin: 2rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    }
+    h2 {
+        color: white;
+        text-transform: uppercase;
+    }
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    img:hover {
+        background-color: white;
+        -webkit-border-radius: 45px;
+        -moz-border-radius: 45px;
+        -ms-border-radius: 45px;
+        -o-border-radius: 45px;
+        border-radius: 45px;
+    }
+    .square img:hover {
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+        border-radius: 16px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .header nav {
+        position: static;
+        transform: none;
+        width: auto;
+        height: auto;
+        background: none;
+    }
+
+    .header nav .flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+
+    ul.menu > li {
+        position: relative;
+    }
+
+    ul.dropdown {
+        background-color: $bg-1;
+        -webkit-border-radius: 0 0 4px 4px;
+        -moz-border-radius: 0 0 4px 4px;
+        -ms-border-radius: 0 0 4px 4px;
+        -o-border-radius: 0 0 4px 4px;
+        border-radius: 0 0 4px 4px;
+        position: absolute;
+        visibility: hidden;
+    }
+
+    ul.menu > li:hover ul.dropdown,
+    ul.menu > li ul.dropdown:hover {
+        visibility: visible;
     }
 }

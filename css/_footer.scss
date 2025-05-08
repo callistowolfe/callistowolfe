@@ -1,0 +1,56 @@
+@import 'colors';
+
+footer {
+    align-items: center;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+        .logos {
+            width: 14rem;
+            padding: 1rem;
+        }
+        .logo {
+            max-width: 200px;
+            min-width: 100px;
+            color: $primary;
+        }
+    .foot-menu li {
+        padding: 1rem;
+        font-size: 1.5rem;
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+
+    footer {
+        justify-content: space-around;
+        padding: 4rem;
+    }
+    .foot-menu {
+        display: flex;
+        li {
+            position: relative;
+            padding: 1rem;
+            font-size: 1.5rem;
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+};
